@@ -1,0 +1,35 @@
+.to-do-list-items {
+  margin-top: 20px;
+}
+
+.items-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+#tick_image,
+#delete_icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.task-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.completed-task {
+  color: #bbb;
+  text-decoration: line-through;
+}
+
+#task_name {
+  margin-left: 16px;
+  font-size: 17px;
+  color: inherit;
+  word-break: break-word;
+}
