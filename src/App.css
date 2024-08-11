@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.eisenhover-matrix {
+  height: 600px;
+  width: 1000px;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 10% 45% 45%;
+  grid-template-rows: 10% 45% 45%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.do_it_heading,
+.schedule_it_heading,
+.delegate_it_heading,
+.delete_it_heading {
+  padding: 0;
+  margin: 0;
+  padding-left: 10px;
+  font-size: 2rem;
+}
+
+.do_it {
+  background-color: #c6f29f;
+}
+
+.do_it_heading {
+  background-color: #95da5c;
+}
+
+.schedule_it {
+  background-color: #a5f2e8;
+}
+
+.schedule_it_heading {
+    background-color: #47e6dc;
+}
+
+.delegate_it {
+  background-color: #ffe28e;
+}
+
+.delegate_it_heading {
+    background-color: #ffa21d;
+}
+
+.delete_it {
+  background-color: #ffcab5;
+}
+
+.delete_it_heading {
+    background-color: #ff5e45;
 }
