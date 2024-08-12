@@ -1,5 +1,5 @@
 import React from "react";
-import './Common.css'
+import "./Common.css";
 import tickImage from "../assets/check.png";
 import untickImage from "../assets/circle.png";
 import deleteIcon from "../assets/delete.png";
@@ -34,5 +34,3 @@ function Common({ todoList, toggleComplete, deleteTask }) {
 }
 
 export default Common;
-
-

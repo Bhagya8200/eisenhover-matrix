@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .eisenhover-matrix {
@@ -10,7 +11,8 @@
   width: 1000px;
   display: grid;
   grid-template-columns: 10% 45% 45%;
-  grid-template-rows: 10% 45% 45%;
+  grid-template-rows: 10% minmax(45%, auto) minmax(45%, auto);
+  padding-bottom: 100px;
 }
 
 .add-task-field {
@@ -90,40 +92,81 @@
   margin: 0;
   padding-left: 10px;
   font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.do_it_heading img,
+.schedule_it_heading img,
+.delegate_it_heading img,
+.delete_it_heading img {
+  width: 40px;
+  height: auto;
 }
 
 .do_it {
   background-color: #c6f29f;
   padding: 0px 10px;
+  overflow-y: scroll;
 }
 
 .do_it_heading {
   background-color: #95da5c;
+  padding: 5px;
 }
 
 .schedule_it {
   background-color: #a5f2e8;
   padding: 0px 10px;
+  overflow-y: scroll;
 }
 
 .schedule_it_heading {
   background-color: #47e6dc;
+  padding: 5px;
 }
 
 .delegate_it {
   background-color: #ffe28e;
   padding: 0px 10px;
+  overflow-y: scroll;
 }
 
 .delegate_it_heading {
   background-color: #ffa21d;
+  padding: 5px;
 }
 
 .delete_it {
   background-color: #ffcab5;
   padding: 0px 10px;
+  overflow-y: scroll;
 }
 
 .delete_it_heading {
   background-color: #ff5e45;
+  padding: 5px;
+}
+
+#urgent,
+#not-urgent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.important-div,
+.not-important-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#important,
+#not-important {
+  transform: rotate(270deg);
+  font-size: 1.5rem;
+  font-weight: 500;
 }

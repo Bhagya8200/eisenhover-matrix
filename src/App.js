@@ -1,6 +1,10 @@
 import "./App.css";
 import React, { useRef, useState } from "react";
-import Common from "./Common/Common"; 
+import Common from "./Common/Common";
+import checked from "./assets/checked.png";
+import delete_square from "./assets/delete-square.png";
+import clock from "./assets/clock.png";
+import add_friend from "./assets/add-friend.png";
 function App() {
   const inputRef = useRef();
   const [todoList, setTodoList] = useState([]);
@@ -68,8 +72,12 @@ function App() {
         <div className="drop-down">
           <div className="drop-down-items">
             <button onClick={() => handleClick("do_it")}>DO IT</button>
-            <button onClick={() => handleClick("schedule_it")}>SCHEDULE IT</button>
-            <button onClick={() => handleClick("delegate_it")}>DELEGATE IT</button>
+            <button onClick={() => handleClick("schedule_it")}>
+              SCHEDULE IT
+            </button>
+            <button onClick={() => handleClick("delegate_it")}>
+              DELEGATE IT
+            </button>
             <button onClick={() => handleClick("delete_it")}>DELETE IT</button>
           </div>
         </div>
@@ -78,16 +86,20 @@ function App() {
       <div className="eisenhover-matrix">
         <div></div>
         <div>
-          <p>URGENT</p>
+          <p id="urgent">URGENT</p>
         </div>
         <div>
-          <p>NOT URGENT</p>
+          <p id="not-urgent">LESS URGENT</p>
         </div>
-        <div>
-          <p>IMPORTANT</p>
+        <div className="important-div">
+          <p id="important">IMPORTANT</p>
         </div>
         <div className="do_it">
-          <h1 className="do_it_heading">DO IT</h1>
+          <div className="do_it_heading">
+            <h1 className="do_it_heading">DO IT</h1>
+            <img src={checked} alt="checked" />
+          </div>
+
           <Common
             todoList={renderTasksByPriority("do_it")}
             toggleComplete={toggleComplete}
@@ -96,19 +108,27 @@ function App() {
         </div>
 
         <div className="schedule_it">
-          <h1 className="schedule_it_heading">SCHEDULE IT</h1>
+          <div className="schedule_it_heading">
+            <h1 className="schedule_it_heading">SCHEDULE IT</h1>
+            <img src={clock} alt="clock" />
+          </div>
+
           <Common
             todoList={renderTasksByPriority("schedule_it")}
             toggleComplete={toggleComplete}
             deleteTask={deleteTask}
           />
         </div>
-        <div>
-          <p>NOT IMPORTANT</p>
+        <div className="not-important-div">
+          <p id="not-important">LESS IMPORTANT</p>
         </div>
 
         <div className="delegate_it">
-          <h1 className="delegate_it_heading">DELEGATE IT</h1>
+          <div className="delegate_it_heading">
+            <h1 className="delegate_it_heading">DELEGATE IT</h1>
+            <img src={add_friend} alt="add_friend" />
+          </div>
+
           <Common
             todoList={renderTasksByPriority("delegate_it")}
             toggleComplete={toggleComplete}
@@ -116,7 +136,11 @@ function App() {
           />
         </div>
         <div className="delete_it">
-          <h1 className="delete_it_heading">DELETE IT</h1>
+          <div className="delete_it_heading">
+            <h1 className="delete_it_heading">DELETE IT</h1>
+            <img src={delete_square} alt="delete_square" />
+          </div>
+
           <Common
             todoList={renderTasksByPriority("delete_it")}
             toggleComplete={toggleComplete}
