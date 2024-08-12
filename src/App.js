@@ -56,7 +56,8 @@ function App() {
 
   return (
     <div className="wrapper">
-      <h1>Prioritize your tasks</h1>
+      <h1>Prioritize your tasks using</h1>
+      <h1 id="main-heading">EISENHOWER MATRIX</h1>
       <div className="add-task-field">
         <input
           ref={inputRef}
@@ -94,6 +95,7 @@ function App() {
         <div className="important-div">
           <p id="important">IMPORTANT</p>
         </div>
+        <div className="do-it-header">Urgent and Important</div>
         <div className="do_it">
           <div className="do_it_heading">
             <h1 className="do_it_heading">DO IT</h1>
@@ -106,7 +108,7 @@ function App() {
             deleteTask={deleteTask}
           />
         </div>
-
+        <div className="schedule-it-header">Important but Less Urgent</div>
         <div className="schedule_it">
           <div className="schedule_it_heading">
             <h1 className="schedule_it_heading">SCHEDULE IT</h1>
@@ -122,7 +124,7 @@ function App() {
         <div className="not-important-div">
           <p id="not-important">LESS IMPORTANT</p>
         </div>
-
+        <div className="delegate-it-header">Urgent but Less Important</div>
         <div className="delegate_it">
           <div className="delegate_it_heading">
             <h1 className="delegate_it_heading">DELEGATE IT</h1>
@@ -135,6 +137,7 @@ function App() {
             deleteTask={deleteTask}
           />
         </div>
+        <div className="delete-it-header">Less Important and Less Urgent</div>
         <div className="delete_it">
           <div className="delete_it_heading">
             <h1 className="delete_it_heading">DELETE IT</h1>
